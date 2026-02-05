@@ -55,7 +55,7 @@ const serviceItems = [
 const quickActions = [
   {
     label: "Make Appointment",
-    href: "https://pmclaguna.youcanbook.me",
+    href: "https://line.me/R/ti/p/@pmcphuket",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.6} d="M8 7V3m8 4V3M5 11h14" />
@@ -136,7 +136,7 @@ export default function Home() {
               <a href="tel:+66962362449" className="hidden sm:block text-gray-700 hover:text-blue-600 transition font-medium">
                 096-236-2449
               </a>
-              <a href="https://pmclaguna.youcanbook.me" target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-6 py-2.5 rounded-full hover:bg-blue-700 transition font-medium">
+              <a href="https://line.me/R/ti/p/@pmcphuket" target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-6 py-2.5 rounded-full hover:bg-blue-700 transition font-medium">
                 Book Now
               </a>
             </div>
@@ -194,7 +194,7 @@ export default function Home() {
                 <span className="relative z-10">Call: 096-236-2449</span>
               </a>
 
-              <a href="https://pmclaguna.youcanbook.me" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-2xl transition-all font-semibold text-lg shadow-xl hover:shadow-2xl flex items-center justify-center gap-3">
+              <a href="https://line.me/R/ti/p/@pmcphuket" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-2xl transition-all font-semibold text-lg shadow-xl hover:shadow-2xl flex items-center justify-center gap-3">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
@@ -753,7 +753,7 @@ export default function Home() {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Book an Appointment</h3>
               <p className="text-gray-600 mb-6">We&apos;ll be at your location in under 60 minutes*</p>
               <div className="space-y-4">
-                <a href="https://pmclaguna.youcanbook.me" target="_blank" rel="noopener noreferrer" className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 rounded-xl hover:from-blue-700 hover:to-cyan-700 transition font-medium shadow-lg hover:shadow-xl text-center">
+                <a href="https://line.me/R/ti/p/@pmcphuket" target="_blank" rel="noopener noreferrer" className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 rounded-xl hover:from-blue-700 hover:to-cyan-700 transition font-medium shadow-lg hover:shadow-xl text-center">
                   Book Online Now
                 </a>
                 <a href="tel:+66962362449" className="block w-full bg-white text-blue-600 py-4 rounded-xl hover:bg-gray-50 transition font-medium border-2 border-blue-600 text-center">
@@ -809,7 +809,7 @@ export default function Home() {
               <ul className="space-y-2 text-gray-400 text-sm">
                 <li><a href="#about" className="hover:text-white transition">About Us</a></li>
                 <li><a href="#contact" className="hover:text-white transition">Contact</a></li>
-                <li><a href="https://pmclaguna.youcanbook.me" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Book Appointment</a></li>
+                <li><a href="https://line.me/R/ti/p/@pmcphuket" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Book Appointment</a></li>
               </ul>
             </div>
             <div>
