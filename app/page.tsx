@@ -149,7 +149,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://palegreen-louse-744738.hostingersite.com/wp-content/uploads/2025/02/PMC_Banner2.jpg"
+            src="/Patients-bg.jpg"
             alt="Phuket Medical Clinic"
             fill
             className="object-cover object-center"
@@ -678,7 +678,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=1200&auto=format&fit=crop"
+            src="/contact-bg.jpg"
             alt="Contact Us Background"
             fill
             className="object-cover object-center"
