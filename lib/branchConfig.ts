@@ -49,7 +49,7 @@ export const branches: Record<string, BranchConfig> = {
       "อำเภอเมืองภูเก็ต ภูเก็ต 83000"
     ],
     addressFull: "206/8 ถ. ภูเก็ต Taladyai, อำเภอเมืองภูเก็ต ภูเก็ต 83000",
-    mapUrl: "https://maps.app.goo.gl/SXaeLrSU9Lx47YPH6",
+    mapUrl: "https://maps.app.goo.gl/cciKqXC2FVeEpmXs8",
   },
   "pmclagunaclinic.com": {
     name: "PMC Laguna",

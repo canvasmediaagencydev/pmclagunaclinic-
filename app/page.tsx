@@ -14,7 +14,7 @@ const serviceItems = [
   {
     title: "General Medicine & Check-up",
     desc: "Comprehensive examinations, consultation, and ongoing care with experienced physicians.",
-    image: "/solution/General Medicine & Check-up.jpg",
+    image: "/solution/General-Medicine-and-Check-up.jpg",
     features: ["Physical exams", "Chronic care"],
   },
   {
@@ -32,7 +32,7 @@ const serviceItems = [
   {
     title: "Chest, Respiratory, Allergy",
     desc: "Specialized treatments for respiratory issues, allergies, and chest-related concerns.",
-    image: "/solution/Chest, Respiratory, Allergy.jpg",
+    image: "/solution/Chest-Respiratory-Allergy.jpg",
     features: ["Allergy care", "Breathing support"],
   },
   {
@@ -44,7 +44,7 @@ const serviceItems = [
   {
     title: "Annual Check-up Programme",
     desc: "Yearly full-body screening packages with clear reports and personal guidance.",
-    image: "/solution/Annual Check-up Programme.jpg",
+    image: "/solution/AnnualCheck-up Programme.jpg",
     features: ["Full screening", "Personalized advice"],
   },
   {
