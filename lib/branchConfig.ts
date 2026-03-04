@@ -23,15 +23,15 @@ export const branches: Record<string, BranchConfig> = {
     phoneHref: "tel:+66962282449",
     whatsapp: "66962282449",
     line: "@pmcphuket",
-    hours: "10:00-19:00",
-    hoursDisplay: "10:00 AM - 7:00 PM",
-    hoursBadge: "OPEN 10AM - 7PM",
+    hours: "09:00-20:00",
+    hoursDisplay: "9:00 AM - 8:00 PM",
+    hoursBadge: "OPEN 9AM - 8PM",
     address: [
       "41/7-41/8 ต. ตลาดเหนือ",
       "อ. เมืองภูเก็ต จ.ภูเก็ต 83000"
     ],
     addressFull: "ภูเก็ต เมดิคอล คลินิก สาขาเมือง ภูเก็ต 41/7-41/8 ต. ตลาดเหนือ อ. เมืองภูเก็ต จ.ภูเก็ต 83000",
-    mapUrl: "https://maps.app.goo.gl/SXaeLrSU9Lx47YPH6",
+    mapUrl: "https://maps.app.goo.gl/yeU9qNArGg3qdwZw9",
   },
   "pmccircleclocktower.com": {
     name: "PMC Circle Clock Tower",
@@ -41,15 +41,15 @@ export const branches: Record<string, BranchConfig> = {
     phoneHref: "tel:+66966962449",
     whatsapp: "66966962449",
     line: "@pmcphuket",
-    hours: "12:00-20:00",
-    hoursDisplay: "12:00 PM - 8:00 PM",
-    hoursBadge: "OPEN 12PM - 8PM",
+    hours: "10:00-19:00",
+    hoursDisplay: "10:00 AM - 7:00 PM",
+    hoursBadge: "OPEN 10AM - 7PM",
     address: [
       "206/8 ถ. ภูเก็ต Taladyai",
       "อำเภอเมืองภูเก็ต ภูเก็ต 83000"
     ],
     addressFull: "206/8 ถ. ภูเก็ต Taladyai, อำเภอเมืองภูเก็ต ภูเก็ต 83000",
-    mapUrl: "https://maps.app.goo.gl/cciKqXC2FVeEpmXs8",
+    mapUrl: "https://share.google/mxy7PwLaauoHoZ1yW",
   },
   "pmclagunaclinic.com": {
     name: "PMC Laguna",
@@ -58,16 +58,16 @@ export const branches: Record<string, BranchConfig> = {
     phoneDisplay: "096-236-2449",
     phoneHref: "tel:+66962362449",
     whatsapp: "66962362449",
-    line: "@pmcphuket",
-    hours: "09:00-24:00",
-    hoursDisplay: "9:00 AM - 12:00 AM (Midnight)",
-    hoursBadge: "OPEN 9AM - MIDNIGHT",
+    line: "@pmclaguna",
+    hours: "09:00-22:00",
+    hoursDisplay: "9:00 AM - 10:00 PM",
+    hoursBadge: "OPEN 9AM - 10PM",
     address: [
       "58/1, Choeng Thale Subdistrict",
       "Thalang District, Phuket 83100"
     ],
     addressFull: "Phuket Medical Clinic Laguna - ภูเก็ต เมดิคอล คลินิก ลากูน่า",
-    mapUrl: "https://maps.app.goo.gl/SXaeLrSU9Lx47YPH6",
+    mapUrl: "https://maps.app.goo.gl/7PwP7N4AF3F2JHxL8",
   },
 };
 
