@@ -72,7 +72,7 @@ export const branches: Record<string, BranchConfig> = {
 };
 
 // Default branch (fallback)
-export const defaultBranch = branches["pmclagunaclinic.com"];
+export const defaultBranch = branches["pmclagunaclinic.net"];
 
 export function getBranchByDomain(hostname: string): BranchConfig {
   // Remove www. prefix if present
@@ -85,7 +85,7 @@ export function getBranchByDomain(hostname: string): BranchConfig {
 
   // Check for partial match (for subdomains or localhost testing)
   for (const key of Object.keys(branches)) {
-    if (domain.includes(key.replace(".com", ""))) {
+    if (domain.includes(key.replace(".net", ""))) {
       return branches[key];
     }
   }
