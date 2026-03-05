@@ -15,9 +15,9 @@ export interface BranchConfig {
 }
 
 export const branches: Record<string, BranchConfig> = {
-  "pmcphukettown.com": {
+  "pmcphukettown.net": {
     name: "PMC Phuket Town",
-    domain: "pmcphukettown.com",
+    domain: "pmcphukettown.net",
     phone: "+66962282449",
     phoneDisplay: "096-228-2449",
     phoneHref: "tel:+66962282449",
@@ -33,9 +33,9 @@ export const branches: Record<string, BranchConfig> = {
     addressFull: "ภูเก็ต เมดิคอล คลินิก สาขาเมือง ภูเก็ต 41/7-41/8 ต. ตลาดเหนือ อ. เมืองภูเก็ต จ.ภูเก็ต 83000",
     mapUrl: "https://maps.app.goo.gl/yeU9qNArGg3qdwZw9",
   },
-  "pmccircleclocktower.com": {
+  "pmccircleclocktower.net": {
     name: "PMC Circle Clock Tower",
-    domain: "pmccircleclocktower.com",
+    domain: "pmccircleclocktower.net",
     phone: "+66966962449",
     phoneDisplay: "096-696-2449",
     phoneHref: "tel:+66966962449",
@@ -51,9 +51,9 @@ export const branches: Record<string, BranchConfig> = {
     addressFull: "206/8 ถ. ภูเก็ต Taladyai, อำเภอเมืองภูเก็ต ภูเก็ต 83000",
     mapUrl: "https://share.google/mxy7PwLaauoHoZ1yW",
   },
-  "pmclagunaclinic.com": {
+  "pmclagunaclinic.net": {
     name: "PMC Laguna",
-    domain: "pmclagunaclinic.com",
+    domain: "pmclagunaclinic.net",
     phone: "+66962362449",
     phoneDisplay: "096-236-2449",
     phoneHref: "tel:+66962362449",
