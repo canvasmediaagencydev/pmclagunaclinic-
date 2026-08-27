@@ -33,6 +33,14 @@ function trackConversion(method: ConversionMethod, href: string) {
     conversion_href: href,
   });
 
+  const ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID;
+  if (window.gtag && ga4MeasurementId) {
+    window.gtag("event", eventName, {
+      contact_method: method,
+      page_path: window.location.pathname,
+    });
+  }
+
   const adsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
   const label = conversionLabels[method];
   if (window.gtag && adsId && label) {

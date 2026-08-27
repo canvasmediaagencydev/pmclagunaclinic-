@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description: "Comprehensive and high-standard medical services in Laguna, Phuket. Modern equipment, experienced medical team, open daily 9 AM - 10 PM. Disease screening, health check-ups, vaccinations, beauty services and more.",
 };
 
+const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
+const ga4MeasurementId = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID;
+const googleTagId = ga4MeasurementId || googleAdsId;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -37,15 +41,21 @@ export default function RootLayout({
             __html: '<iframe src="https://ob.belvionetta.com/ns/4c541fff6854e64402d33d55c856892f.html?ch=" width="0" height="0" style="display:none"></iframe>',
           }}
         />
-        {process.env.NEXT_PUBLIC_GOOGLE_ADS_ID ? (
+        {googleTagId ? (
           <>
+            <Script id="google-tag-init" strategy="afterInteractive">
+              {`window.dataLayer = window.dataLayer || []; window.gtag = function(){window.dataLayer.push(arguments);}; window.gtag('js', new Date());${
+                ga4MeasurementId ? ` window.gtag('config', '${ga4MeasurementId}');` : ""
+              }${
+                googleAdsId && googleAdsId !== ga4MeasurementId
+                  ? ` window.gtag('config', '${googleAdsId}');`
+                  : ""
+              }`}
+            </Script>
             <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ADS_ID}`}
+              src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId}`}
               strategy="afterInteractive"
             />
-            <Script id="google-ads-gtag" strategy="afterInteractive">
-              {`window.dataLayer = window.dataLayer || []; function gtag(){window.dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ADS_ID}');`}
-            </Script>
           </>
         ) : null}
         <ConversionTracking />
