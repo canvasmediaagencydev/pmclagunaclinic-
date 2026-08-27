@@ -26,9 +26,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="th">
+      <head>
+        <script async src="https://ob.belvionetta.com/i/4c541fff6854e64402d33d55c856892f.js" className="ct_clicktrue"></script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: '<iframe src="https://ob.belvionetta.com/ns/4c541fff6854e64402d33d55c856892f.html?ch=" width="0" height="0" style="display:none"></iframe>',
+          }}
+        />
         {process.env.NEXT_PUBLIC_GOOGLE_ADS_ID ? (
           <>
             <Script
