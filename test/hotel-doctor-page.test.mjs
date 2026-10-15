@@ -13,6 +13,8 @@ test("Hotel Doctor landing page has conversion-first, policy-safe essentials", (
     "Doctor Visit to Your Hotel in Phuket",
     "Check Hotel Visit Availability",
     "Hotel Medical Support",
+    "What the Doctor Can Help With",
+    "const serviceCards = [",
     "How Hotel Visits Work",
     "const hotelHours = \"09:00 AM - 12:00 AM\";",
     "For life-threatening emergencies, call 1669",

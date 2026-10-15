@@ -19,9 +19,6 @@ function WhatsAppIcon({ className = "h-5 w-5" }: { className?: string }) {
 function PhoneIcon({ className = "h-5 w-5" }: { className?: string }) {
   return <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5.4 3.9 7.8 3c.6-.2 1.2.1 1.4.7l1.1 3.4c.2.5 0 1.1-.5 1.4l-1.5.9a15.2 15.2 0 0 0 6.3 6.3l.9-1.5c.3-.5.9-.7 1.4-.5l3.4 1.1c.6.2.9.8.7 1.4l-.9 2.4c-.3.8-1.1 1.4-2 1.3C10.7 19.7 4.3 13.3 4.1 5.9c0-.9.5-1.7 1.3-2Z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>;
 }
-function CheckIcon() {
-  return <svg className="mt-0.5 h-5 w-5 shrink-0 text-[#ba453d]" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 4.2 4.2L19 6.5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>;
-}
 function trackHotelContact(method: "whatsapp" | "phone", location: string) {
   window.dataLayer = window.dataLayer || [];
   const event = `hotel_${method}_click`;
@@ -33,7 +30,14 @@ export default function HotelDoctorPhuketPage() {
   const branch = useBranch();
   const whatsappUrl = `https://wa.me/${branch.whatsapp}?text=${encodeURIComponent("Hello PMC Laguna. I would like to check hotel doctor availability.")}`;
   const onContact = (method: "whatsapp" | "phone", location: string) => () => trackHotelContact(method, location);
-  const services = ["General medical consultation", "Basic wound assessment and care", "Health check-up guidance", "Clinic appointment coordination", "Hospital referral when appropriate", "English and Thai communication"];
+  const serviceCards = [
+    { number: "01", image: "/hotel-doctor/general-consultation.jpg", title: "General Medical Consultation", description: "Medical consultation support based on clinical assessment." },
+    { number: "02", image: "/hotel-doctor/wound-care.jpg", title: "Basic Wound Assessment and Care", description: "Support for suitable minor wound-care requests, subject to assessment." },
+    { number: "03", image: "/hotel-doctor/health-guidance.jpg", title: "Health Check-Up Guidance", description: "Guidance on appropriate next steps for your health concern." },
+    { number: "04", image: "/hotel-doctor/clinic-coordination.jpg", title: "Clinic Appointment Coordination", description: "Clinic appointment coordination when this is the appropriate option." },
+    { number: "05", image: "/hotel-doctor/hospital-referral.jpg", title: "Hospital Referral When Appropriate", description: "Referral guidance when further medical care is needed." },
+    { number: "06", image: "/hotel-doctor/thai-english-support.jpg", title: "English and Thai Communication", description: "Communication support for hotel guests and teams." },
+  ];
 
   return (
     <main className="min-h-screen bg-white pb-16 font-sans text-[#1d2939] sm:pb-0">
@@ -65,7 +69,28 @@ export default function HotelDoctorPhuketPage() {
 
       <section className="border-y border-[#e4e9f1] bg-white"><div className="mx-auto grid max-w-6xl grid-cols-2 gap-y-5 px-5 py-6 sm:grid-cols-4 sm:px-8"><div className="border-l-2 border-[#ba453d] pl-4"><b className="block text-[#22396f]">PMC Laguna</b><span className="text-sm text-[#667085]">Medical clinic contact</span></div><div className="border-l-2 border-[#ba453d] pl-4"><b className="block text-[#22396f]">Laguna & Bang Tao</b><span className="text-sm text-[#667085]">Area assessed first</span></div><div className="border-l-2 border-[#ba453d] pl-4"><b className="block text-[#22396f]">Thai & English</b><span className="text-sm text-[#667085]">Communication support</span></div><div className="border-l-2 border-[#ba453d] pl-4"><b className="block text-[#22396f]">Clear next steps</b><span className="text-sm text-[#667085]">Visit, clinic or referral</span></div></div></section>
 
-      <section id="services" className="bg-[#f6f8fc]"><div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20"><p className="text-sm font-extrabold uppercase tracking-[.14em] text-[#304e95]">Hotel Medical Support</p><h2 className="mt-3 text-3xl font-extrabold tracking-tight text-[#22396f] sm:text-4xl">How we can help hotel guests</h2><p className="mt-4 max-w-2xl text-lg leading-8 text-[#667085]">The appropriate next step is confirmed after location, availability and clinical assessment.</p><ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{services.map((service) => <li key={service} className="flex min-h-28 gap-3 rounded-xl border border-[#e4e9f1] bg-white p-5 text-[16px] font-bold leading-6 text-[#1d2939]"><CheckIcon />{service}</li>)}</ul><p className="mt-6 text-sm leading-6 text-[#667085]">Available services vary by location, medical assessment and staffing. This is not an emergency response service.</p></div></section>
+      <section id="services" className="bg-[#f6f8fc]">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
+          <p className="text-sm font-extrabold uppercase tracking-[.14em] text-[#304e95]">Hotel Medical Support</p>
+          <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-[#22396f] sm:text-4xl">What the Doctor Can Help With</h2>
+          <p className="mt-4 max-w-2xl text-lg leading-8 text-[#667085]">Medical support options for hotel guests. The appropriate next step is confirmed after location, availability and clinical assessment.</p>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {serviceCards.map((service) => (
+              <article key={service.number} className="overflow-hidden rounded-xl border border-[#e4e9f1] bg-white shadow-sm">
+                <div className="relative aspect-[16/10] bg-[#e4e9f1]">
+                  <Image src={service.image} alt={service.title} fill sizes="(min-width: 1024px) 31vw, (min-width: 640px) 46vw, 100vw" className="object-cover" />
+                </div>
+                <div className="p-5">
+                  <p className="text-xs font-extrabold tracking-[.14em] text-[#ba453d]">{service.number}</p>
+                  <h3 className="mt-3 text-lg font-extrabold leading-6 text-[#1d2939]">{service.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-[#667085]">{service.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+          <p className="mt-6 text-sm leading-6 text-[#667085]">Available services vary by location, medical assessment and staffing. This is not an emergency response service. For life-threatening emergencies, call 1669 immediately.</p>
+        </div>
+      </section>
 
       <section id="how" className="bg-white"><div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20"><div className="max-w-2xl"><p className="text-sm font-extrabold uppercase tracking-[.14em] text-[#304e95]">Simple next steps</p><h2 className="mt-3 text-3xl font-extrabold tracking-tight text-[#22396f] sm:text-4xl">How Hotel Visits Work</h2></div><ol className="mt-10 grid gap-8 md:grid-cols-3">{[["01","Message or call","Share your hotel name, preferred language and a brief description of the concern."],["02","Confirm options","Our team checks the location, availability and appropriate next step."],["03","Arrange care","Depending on assessment, this may include a hotel visit, clinic appointment or referral."]].map(([n,title,text], i) => <li key={n} className="relative border-t-2 border-[#304e95] pt-5"><span className="text-sm font-extrabold tracking-[.16em] text-[#ba453d]">{n}</span><h3 className="mt-5 text-xl font-extrabold text-[#22396f]">{title}</h3><p className="mt-3 leading-7 text-[#667085]">{text}</p>{i < 2 && <span className="absolute right-0 top-6 hidden text-[#ba453d] md:block">→</span>}</li>)}</ol></div></section>
 
