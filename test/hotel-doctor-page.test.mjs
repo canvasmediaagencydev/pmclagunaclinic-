@@ -11,10 +11,12 @@ test("Hotel Doctor landing page has conversion-first, policy-safe essentials", (
   const page = fs.readFileSync(pagePath, "utf8");
   for (const requiredCopy of [
     "Doctor Visit to Your Hotel in Phuket",
-    "WhatsApp Us Now",
-    "How hotel on-call works",
+    "Check Hotel Visit Availability",
+    "Hotel Medical Support",
+    "How Hotel Visits Work",
+    "const hotelHours = \"09:00 AM - 12:00 AM\";",
     "For life-threatening emergencies, call 1669",
-    "Hotel visits are subject to availability",
+    "Hotel visits depend on location, availability and clinical assessment",
   ]) {
     assert.match(page, new RegExp(requiredCopy.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
