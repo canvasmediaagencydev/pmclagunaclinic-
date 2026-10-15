@@ -28,3 +28,15 @@ test("Hotel Doctor landing page has conversion-first, policy-safe essentials", (
   assert.doesNotMatch(page, /guaranteed.{0,40}60 minutes/i);
   assert.doesNotMatch(page, /24\/7/i);
 });
+
+test("Hotel Doctor navigation anchors reserve space below the sticky header", () => {
+  const page = fs.readFileSync(pagePath, "utf8");
+  for (const sectionId of ["services", "how", "areas", "faq"]) {
+    assert.match(page, new RegExp(`id=\\"${sectionId}\\"[^>]*scroll-mt-24`), `${sectionId} must scroll below the sticky header`);
+  }
+  assert.match(page, /data-conversion-location="hotel-hero-whatsapp"/);
+  assert.match(page, /data-conversion-location="hotel-hero-call"/);
+  assert.match(page, /data-conversion-location="hotel-sticky-whatsapp"/);
+  assert.match(page, /branch\.phoneHref/);
+  assert.match(page, /https:\/\/wa\.me\/\$\{branch\.whatsapp\}/);
+});
