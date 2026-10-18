@@ -62,9 +62,20 @@ Use the proven GitHub-to-Vercel deployment path. Do **not** alter DNS, Vercel al
 - `25c7d3c` — Hotel Doctor navigation hardening
 - `2a991e2` — Hotel Doctor image cards
 
-## Cloudflare/edge incident procedure
+## Vercel edge incident procedure
 
-Cloudflare zone configuration must be inspected before use. Once dashboard access is available, document the exact zone, current WAF rules, bot settings, rate-limit rules, and named approvers here.
+PMC controls the Cloudflare DNS zone, but the public application response is served by Vercel. Therefore the current incident control point available to the Canvas project is **Vercel Firewall**.
+
+Verified current state:
+
+- Vercel automatic DDoS/system traffic mitigations: **Active**.
+- Vercel custom rules/IP blocks: none configured.
+- Vercel Attack Mode: off (correct for normal Ads landing-page traffic; it challenges every visitor).
+- `/wp-login.php` and `/xmlrpc.php` return HTTP 403 at the edge, confirming legacy WordPress probes are already denied.
+
+No broad bot rule or homepage rate limit is active because there is no traffic baseline and such a rule could challenge genuine hotel guests or paid-media users. Add a targeted rate-limit rule only after route-level traffic data identifies an expensive or abused endpoint.
+
+Cloudflare zone configuration remains a PMC-owned visibility gap. If PMC later grants read-only access, document its WAF rules, bot settings, rate-limit rules, and named approvers here.
 
 During a verified traffic attack, the intended order is:
 
